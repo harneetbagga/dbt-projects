@@ -1,2 +1,2 @@
-# dot-projects
-Repository to create projects for dot
+# dbt-projects
+Repository to create projects for dbt
