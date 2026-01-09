@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: employee
-    description: DBT model
+    description: "DBT model"
     columns:
       - name: emp_id
         tests:
@@ -15,10 +15,63 @@ models:
       - name: emp_salary
         tests: 
           - value_check
-
+  - name: customer
+    description: "dbt model for customer"
+  - name: customer_vw
+    description: "dbt model for customer view"
+  - name: sales
+    description: "dbt model for sales"
+  - name: product
+    description: "dbt model for product"
+  - name: purchase
+    description: "dbt model for purchase"
+  - name: clean_orders
+    description: "dbt model for clean orders"
+  - name: final_orders
+    description: "dbt model for final orders"
+  - name: concat_address
+    description: "DBT model for the address concat"
+  - name: concat_name
+    description: "DBT Model for the name concat"
+   
 sources:
   - name: employee
     database: DBT_ANALYTICS
     schema: PUBLIC
     tables:
       - name: EMPLOYEE_RAW
+  - name: customer
+    database: DBT_ANALYTICS
+    schema: PUBLIC
+    tables:
+      - name: CUSTOMER_SRC
+  - name: sales
+    database: DBT_ANALYTICS
+    schema: PUBLIC
+    tables:
+      - name: SALES_SRC
+  - name: product
+    database: DBT_ANALYTICS
+    schema: PUBLIC
+    tables:
+      - name: PRODUCT_SRC
+  - name: purchase
+    database: DBT_ANALYTICS
+    schema: PUBLIC
+    tables:
+      - name: PURCHASE_SRC
+  - name: orders
+    database: DBT_ANALYTICS
+    schema: PUBLIC
+    tables:
+      - name: BASE_ORDERS
+  - name: patient
+    database: DBT_ANALYTICS
+    schema: PUBLIC
+    tables:
+      - name: PATIENT_SRC
+  - name: country
+    database: DBT_ANALYTICS
+    schema: PUBLIC
+    tables:
+      - name: SESSION_SRC
